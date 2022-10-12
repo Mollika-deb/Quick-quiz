@@ -1,17 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Subject = ({subject}) => {
-    const { logo, name, total} = subject
+    const {id, logo, name, total} = subject;
+    const navigate = useNavigate();
+    const handleNavigate = () =>{
+        navigate(`/subject/${id}`)
+    }
     return (
-        <div >
-            <img src={logo} alt="" />
-            <div className='flex justify-between'>
-                <div className='flex'>
-                    <h3>{name}</h3>
-                    <h3>{total}</h3>
+        <div className='border-2 border-slate-400 rounded-lg '>
+            <img className='img-fluid p-5' src={logo} alt="" />
+            <div className='flex justify-between items-center p-5 font-bold'>
+                <div className='flex '>
+                    <h3>{name} : </h3>
+                    <h3 className='ml-3'>{total}</h3>
                 </div>
                 <div>
-                    <button>Start practice</button>
+                    <button onClick={handleNavigate} className='bg-sky-500 px-8 py-2 rounded-lg text-white font-bold'>Start practice</button>
                 </div>
             </div>
         </div>

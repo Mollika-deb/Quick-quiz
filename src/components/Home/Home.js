@@ -17,7 +17,7 @@ const Home = () => {
                     <p className='ml-8 text-2xl'>Quizzes are fun and informative ways to test the knowledge of people.The quizzes help the student to learn with practice, as they allow the students to think back to the information previously learned and remember them while quizzing.</p>
                 </div>
            </div>
-           <div className='grid grid-cols-1 md-grid-cols-2lg-grid-cols-3 gap-6 justify-center'>
+            <div className='grid mt-16 bg-slate-200  pt-10 gap-x-16 gap-y-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-center pl-32 pr-32'>
                {
                     subjects.map(subject => <Subject 
                         key={subject.id}
