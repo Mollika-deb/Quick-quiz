@@ -9,10 +9,10 @@ const Quiztopic = () => {
     const {questions, logo, name} = quiz.data
     return (
         <div>
-            <h1>Welcome to {name} section</h1>
-            <img src={logo} alt="" />
+            <h1  className='text-5xl font-bold text-center'>Welcome to {name} section</h1>
+            <img className='m-12 mx-auto bg-sky-500' src={logo} alt="" />
            
-           <div>
+           <div className='text-center'>
                 {
                     questions.map((question, index) => <QuestionOption key={question.question} index={index} qus={question}></QuestionOption>)
                 }

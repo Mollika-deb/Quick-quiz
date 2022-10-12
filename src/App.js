@@ -6,6 +6,7 @@ import Chart from './components/Chart/Chart';
 import Home from './components/Home/Home';
 import Quiztopic from './components/Quiztopic/Quiztopic';
 import Main from './Layout/Main';
+import {ToastContainer} from 'react-toastify';
 
 function App() {
   const Router = createBrowserRouter([
@@ -14,6 +15,9 @@ function App() {
       element: <Main></Main>,
       children:[
        { path: '/' ,
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          },
         element:<Home></Home>},
        { path: 'home', 
          loader: async () => {
@@ -22,9 +26,9 @@ function App() {
        element: <Home></Home> 
       },
 
-      { path: '/quiz/:quizId',
+      { path: '/subject/:subjectId',
       loader: async({params}) =>{
-        return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+        return fetch(`https://openapi.programming-hero.com/api/quiz/${params.subjectId}`)
       },
        element: <Quiztopic></Quiztopic>
        },
