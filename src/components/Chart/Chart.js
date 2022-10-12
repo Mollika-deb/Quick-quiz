@@ -4,7 +4,8 @@ import Header from '../Header/Header';
 const Chart = () => {
     return (
         <div>
-            <Header></Header>
+         
+           <h3>iopopsk</h3>
         </div>
     );
 };

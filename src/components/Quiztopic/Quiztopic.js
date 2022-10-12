@@ -5,7 +5,8 @@ import Navbar from '../Navbar';
 const Quiztopic = () => {
     return (
         <div>
-           <Header></Header>
+        
+           <h1>kjdfkj</h1>
         </div>
     );
 };
