@@ -12,8 +12,9 @@ function App() {
     
       { path: '/', 
       element: <Main></Main>,
-     children:[
-       { path: '/', element: <Home></Home> },
+      children:[
+       { path: '/' ,
+        element:<Home></Home>},
        { path: 'home', 
          loader: async () => {
            return fetch('https://openapi.programming-hero.com/api/quiz');
@@ -33,7 +34,7 @@ function App() {
      ]
      },
       
-     {path:'*', element:''}
+     {path:'*', element:<div >This route is not found : 404!!</div>}
     
     
   ])

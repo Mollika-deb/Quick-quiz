@@ -12,7 +12,7 @@ const Header = () => {
             <div className='font-semibold text-gray-300'>
 
                 <Link className='ml-6 ' to='/home'>Home</Link>
-                <Link className='ml-6' to='/quiztopic'>QuickTopic</Link>
+                
                 <Link className='ml-6' to='/chart'>Chart</Link>
                 <Link className='ml-6' to='/blog'>Blog</Link>
             </div>
