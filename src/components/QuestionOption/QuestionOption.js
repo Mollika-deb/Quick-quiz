@@ -1,5 +1,6 @@
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+const eye = new URL('/src/images/eye.png', import.meta.url);
 
 const QuestionOption = ({qus, index}) => {
     const {options, id, correctAnswer, question} = qus;
@@ -11,6 +12,8 @@ const QuestionOption = ({qus, index}) => {
             <div>
                 <div className='flex gap-5 m-5'>
                     <p className='text-3xl text-white '>{index+1}.{question.replace(/<\/?[^>]+(>|$)/g, "")}</p>
+                    <img onClick={notify} className="h-40 md:h-12 text-gray-600" src={eye} alt="" />
+                    <ToastContainer/>
                     
                 </div>
             </div>
