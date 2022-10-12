@@ -7,20 +7,21 @@ const QuestionOption = ({qus, index}) => {
     const notify = () => toast('correctAnswer');
 
     return (
-        <div>
+        <div className='m-6 bg-orange-400 p-6 flex flex-col mx-auto justify-center'>
             <div>
-                <div>
+                <div className='flex gap-5 m-5'>
                     <p className='text-3xl text-white '>{index+1}.{question.replace(/<\/?[^>]+(>|$)/g, "")}</p>
+                    
                 </div>
             </div>
             <ul >
                 {
                   
-                         options.map(option => <div key={option}>
-                            <li onClick={clicked}>
-                            <div>
-                                <input id="list-radio-license"  type="radio" value="" name={id}/>
-                                <label htmlFor="list-radio-license">{option}</label>
+                         options.map(option => <div key={option} className="m-6 w-64 text-sm font-medium text-gray-700 bg-slate-100">
+                            <li onClick={clicked} className="w-full border-b border-gray-300">
+                            <div className='flex items-center pl-3'>
+                                <input className='w-4 h-4 text-sky-500 bg-slate-500' id="list-radio-license"  type="radio" value="" name={id}/>
+                                <label className='py-3 ml-2 w-full text-sm font-medium text-gray-600' htmlFor="list-radio-license">{option}</label>
                             </div>
                             
                             </li>
